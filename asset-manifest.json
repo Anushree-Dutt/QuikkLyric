@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/QuikkLyric/static/css/main.31d6cfe0.css",
+    "main.js": "/QuikkLyric/static/js/main.62739f5b.js",
+    "index.html": "/QuikkLyric/index.html",
+    "main.62739f5b.js.map": "/QuikkLyric/static/js/main.62739f5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.62739f5b.js"
+  ]
+}
