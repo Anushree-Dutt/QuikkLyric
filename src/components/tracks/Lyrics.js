@@ -1,36 +1,33 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Spinner from "../layout/Spinner";
 import Moment from "react-moment";
 
-const Lyrics = props => {
+const Lyrics = (props) => {
   const [track, setTrack] = useState({});
   const [lyrics, setLyrics] = useState({});
-
+  const {id} = useParams()
+  
   useEffect(() => {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${
-          props.match.params.id
-        }&apikey=${process.env.REACT_APP_MM_KEY}`
+        `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${id}&apikey=${process.env.REACT_APP_MM_KEY}`
       )
-      .then(res => {
+      .then((res) => {
         let lyrics = res.data.message.body.lyrics;
         setLyrics({ lyrics });
 
         return axios.get(
-          `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${
-            props.match.params.id
-          }&apikey=${process.env.REACT_APP_MM_KEY}`
+          `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${id}&apikey=${process.env.REACT_APP_MM_KEY}`
         );
       })
-      .then(res => {
+      .then((res) => {
         let track = res.data.message.body.track;
         setTrack({ track });
       })
-      .catch(err => console.log(err));
-  }, [this.props.match.params.id]);
+      .catch((err) => console.log(err));
+  }, [id]);
 
   if (
     track === undefined ||
