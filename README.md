@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# QuikkLyric
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+QuikkLyric is a web application that we can use to search song lyrics using React.js built in context API along with the Musixmatch public API.
 
-## Available Scripts
+The lyrics page gets the lyrics by making a request to the Musixmatch API.
 
-In the project directory, you can run:
+It has the search component and the ability to dispatch an action to the reducer in our context to update the track list in the state with the search results. 
 
-### `npm start`
+### Home Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+It displays the top 10 tracks of music.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![9](https://user-images.githubusercontent.com/71523195/178097212-1f55b303-a64b-4500-9d11-b64b96c9657e.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Search feature
 
-### `npm run build`
+We can search for a song title or any keyword and it displays the search results accordingly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![8](https://user-images.githubusercontent.com/71523195/178097174-893c788f-daf2-43cd-9d3e-c3586b4a44db.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Lyrics Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+On clicking the view lyrics, we can see the lyrics of the song. Also displaying the Album ID, Release Date, Song Genre and indicates the use of any explicit words in the song.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![7](https://user-images.githubusercontent.com/71523195/178097131-2c6f0341-81ad-42a6-9bcb-9b847e63290e.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![6](https://user-images.githubusercontent.com/71523195/178097067-0b43ae9d-c0cf-42a4-8139-9386fdf24844.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Demonstration
 
-### Code Splitting
+https://master.d2aw14joyrcfe3.amplifyapp.com/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
